@@ -16,10 +16,6 @@ export default function HomeScreen() {
           style={styles.reactLogo}
         />
       }>
-      <Image
-        source={require('@/assets/very_funny_ahhCatt.jpg')}
-        style={styles.catImage}
-      />
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>
         <HelloWave />
@@ -55,6 +51,10 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">app-example</ThemedText>.
         </ThemedText>
       </ThemedView>
+      <Image
+        source={require('@/assets/very_funny_ahhCatt.jpg')}
+        style={styles.catImage}
+      />
     </ParallaxScrollView>
   );
 }
@@ -81,6 +81,7 @@ const styles = StyleSheet.create({
     height: 200,
     alignSelf: 'center',
     borderRadius: 16,
-    marginVertical: 16,
+    marginTop: 32,
+    marginBottom: 16,
   },
 });
