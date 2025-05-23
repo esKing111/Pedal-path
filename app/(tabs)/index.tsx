@@ -1,10 +1,7 @@
 import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 
-import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
 
 export default function HomeScreen() {
   return (
@@ -16,6 +13,10 @@ export default function HomeScreen() {
           style={styles.reactLogo}
         />
       }>
+      <Image
+        source={require('@/assets/very_funny_ahhCatt.jpg')}
+        style={styles.catImage}
+      />
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>
         <HelloWave />
@@ -51,24 +52,11 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">app-example</ThemedText>.
         </ThemedText>
       </ThemedView>
-      <Image
-        source={require('@/assets/very_funny_ahhCatt.jpg')}
-        style={styles.catImage}
-      />
     </ParallaxScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
   reactLogo: {
     height: 178,
     width: 290,
