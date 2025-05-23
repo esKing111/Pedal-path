@@ -1,7 +1,10 @@
 import { Image } from 'expo-image';
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
+import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
+import { ThemedText } from '@/components/ThemedText';
+import { ThemedView } from '@/components/ThemedView';
 
 export default function HomeScreen() {
   return (
@@ -71,5 +74,12 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     marginTop: 32,
     marginBottom: 16,
+  },
+  titleContainer: {
+    alignItems: 'center',
+    marginBottom: 24,
+  },
+  stepContainer: {
+    marginBottom: 24,
   },
 });
